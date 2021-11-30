@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup_page">
+
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        app:icon="@drawable/arrow_back_24"
+        app:iconTint="@color/teal_700"
+        app:rippleColor="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_judul1"
+        android:layout_width="340dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Halo!\nSelamat Bergabung. Silahkan Membuat Akun"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="?attr/actionMenuTextColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_back" />
+
+    <TextView
+        android:id="@+id/txt_judul2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="134dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="133dp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Sign Up"
+        android:textColor="?attr/actionMenuTextColor"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_judul1" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txt_judul2">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lbl_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="42dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Name"
+                android:textColorHint="@color/teal_700"
+                app:hintTextColor="@color/teal_700"
+                app:boxStrokeColor="@color/light_blue"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/person_outline"
+                app:startIconTint="@color/teal_700">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lbl_phone_number"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_name"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Telephone Number"
+                android:textColorHint="@color/teal_700"
+                app:boxStrokeColor="@color/light_blue"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/outline_call"
+                app:startIconTint="@color/teal_700">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:inputType="number"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lbl_email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_phone_number"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Email"
+                android:textColorHint="@color/teal_700"
+                app:boxStrokeColor="@color/light_blue"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/outline_email"
+                app:startIconTint="@color/teal_700">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lbl_username"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_email"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Username"
+                android:textColorHint="@color/teal_700"
+                app:boxStrokeColor="@color/light_blue"
+                app:endIconMode="clear_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:startIconDrawable="@drawable/username_logo"
+                app:startIconTint="@color/teal_700">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lbl_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lbl_username"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="50dp"
+                android:hint="Password"
+                android:textColorHint="@color/teal_700"
+                app:boxStrokeColor="@color/light_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lbl_username"
+                app:startIconDrawable="@drawable/outline_lock"
+                app:startIconTint="@color/teal_700">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/input_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_medium"
+                    android:inputType="textPassword"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/lbl_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl_password"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="@font/poppins_medium"
+                android:labelFor="@+id/rdg_gender"
+                android:gravity="center"
+                android:layout_marginTop="18dp"
+                android:textColor="@color/teal_700"
+                android:text="Gender"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/rdg_gender"
+                android:layout_width="match_parent"
+                android:layout_height="41dp"
+                android:layout_below="@id/lbl_gender"
+                android:layout_marginTop="3dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rdb_laki_laki"
+                    style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"
+                    android:layout_width="138dp"
+                    android:layout_height="26dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/teal_700"
+                    android:text="Laki-Laki"
+                    android:textSize="13sp" />
+
+                <RadioButton
+                    android:id="@+id/rdb_perempuan"
+                    style="@style/Widget.MaterialComponents.CompoundButton.RadioButton"
+                    android:layout_width="160dp"
+                    android:layout_height="28dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="5dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="@color/teal_700"
+                    android:text="Perempuan"
+                    android:textSize="13sp" />
+            </RadioGroup>
+
+            <RelativeLayout
+                android:id="@+id/grp_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rdg_gender"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp">
+
+                <TextView
+                    android:id="@+id/lbl_umur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Usia"
+                    android:textSize="13sp"
+                    android:textColor="@color/teal_700"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <SeekBar
+                    android:id="@+id/input_umur"
+                    android:layout_width="500dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lbl_umur"
+                    android:layout_marginHorizontal="65dp"
+                    android:layout_marginBottom="15dp"
+                    android:max="100"
+                    android:progress="10"
+                    android:scaleX="1"
+                    android:scaleY="1" />
+            </RelativeLayout>
+
+            <CheckBox
+                android:id="@+id/cb_validasi_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/grp_seekbar"
+                android:checked="false"
+                android:gravity="center"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp"
+                android:textColor="@color/teal_700"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Pemeriksaan Kesehatan"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btn_sign_up"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="169dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="90dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Sign-Up"
+                android:textColor="@color/light_blue"
+                app:backgroundTint="@color/white"
+                app:strokeColor="@color/light_blue"
+                app:cornerRadius="50dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_below="@id/cb_validasi_data"
+                app:strokeWidth="3dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

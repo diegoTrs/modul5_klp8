@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Perpustakaan</string>
+    <string name="title_activity_home_screen">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_download">Download</string>
+    <string name="title_user">User</string>
+</resources>

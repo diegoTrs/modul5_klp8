@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/row_item"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="10dp"
+android:orientation="horizontal"
+app:cardCornerRadius="5dp"
+app:cardElevation="5dp">
+
+
+
+    <ImageView
+        android:id="@+id/img_buku"
+        android:layout_width="76dp"
+        android:layout_height="120dp"
+        tools:src="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10sp"
+        >
+        <TextView
+            android:id="@+id/txt_judul_buku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/actionMenuTextColor"
+            android:fontFamily="@font/roboto"
+            android:textSize="16sp"
+            android:layout_marginTop="6dp"
+            android:text="Judul Buku"
+            />
+
+        <TextView
+            android:id="@+id/txt_penulis_buku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/light_blue"
+            android:fontFamily="@font/roboto"
+            android:textSize="12sp"
+            android:layout_marginTop="6dp"
+            android:text="Penulis Buku"
+            />
+
+        <TextView
+            android:id="@+id/txt_page_buku"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/actionMenuTextColor"
+            android:fontFamily="@font/roboto"
+            android:textSize="10sp"
+            android:layout_marginTop="6dp"
+            android:text="Page: 384"
+            />
+
+        <TextView
+            android:id="@+id/txt_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/actionMenuTextColor"
+            android:fontFamily="@font/roboto"
+            android:textSize="10sp"
+            android:layout_marginTop="6dp"
+            android:drawableLeft="@drawable/star_rate"
+            android:drawableTint="@color/yellow"
+            android:text="4,5"
+            />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
