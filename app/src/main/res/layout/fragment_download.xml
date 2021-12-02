@@ -40,5 +40,5 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/banner"
         app:layout_constraintBottom_toBottomOf="parent"
-        tools:listitem="@layout/row_item_buku" />
+        tools:listitem="@layout/row_item_download" />
 </androidx.constraintlayout.widget.ConstraintLayout>
