@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Perpustakaan">
+        <activity android:name=".EditProfileActivity"></activity>
         <activity
             android:name=".HomeScreenActivity"
-            android:label="@string/title_activity_home_screen"></activity>
+            android:label="@string/title_activity_home_screen" />
         <activity android:name=".onboarding_page" />
         <activity android:name=".login_page" />
         <activity android:name=".signup_page">

@@ -3,15 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.user.UserFragment">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="76sp"
-        android:orientation="vertical"
         android:background="@drawable/background_banner"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -45,19 +44,105 @@
         tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txt_nama_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="174dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="179dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Hi, Budi!"
         android:textColor="?attr/actionMenuTextColor"
         android:textSize="18sp"
-        android:text="Hi, Budi!"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_user" />
 
+    <Button
+        android:id="@+id/btn_edit_akun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_profile_user"
+        android:gravity="left"
+        android:paddingTop="10sp"
+        android:text="Edit Akun"
+        android:textAllCaps="false"
+        android:textColor="@color/light_blue"
+        android:textSize="14sp"
+        app:backgroundTint="@color/soft_blue"
+        app:icon="@drawable/outline_manage_accounts_20"
+        app:iconTint="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nama_user" />
+
+    <Button
+        android:id="@+id/btn_dark_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_profile_user"
+        android:gravity="left"
+        android:paddingTop="10sp"
+        android:text="Dark Mode"
+        android:textAllCaps="false"
+        android:textColor="@color/light_blue"
+        android:textSize="14sp"
+        app:backgroundTint="@color/soft_blue"
+        app:icon="@drawable/outline_dark_mode_20"
+        app:iconTint="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_edit_akun" />
+
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_profile_user"
+        android:gravity="left"
+        android:paddingTop="10sp"
+        android:text="Download"
+        android:textAllCaps="false"
+        android:textColor="@color/light_blue"
+        android:textSize="14sp"
+        app:backgroundTint="@color/soft_blue"
+        app:icon="@drawable/outline_file_download_20"
+        app:iconTint="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_dark_mode" />
+
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/btn_profile_user"
+        android:gravity="left"
+        android:paddingTop="10sp"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:textColor="@color/light_blue"
+        android:textSize="14sp"
+        app:backgroundTint="@color/soft_blue"
+        app:icon="@drawable/outline_logout_20"
+        app:iconTint="@color/light_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_download" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
