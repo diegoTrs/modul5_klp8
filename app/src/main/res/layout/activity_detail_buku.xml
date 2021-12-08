@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailBukuActivity">
+
+
+    <LinearLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:background="@drawable/background_banner"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_back"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="20sp"
+            android:paddingLeft="20sp"
+            app:icon="@drawable/arrow_back_24"
+            app:iconGravity="textStart"
+            app:iconTint="@color/light_blue"
+            app:rippleColor="@color/light_blue" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="76sp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/judul_baner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:paddingRight="60dp"
+                android:text="Detail Buku"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_judul_buku_banner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="14dp"
+                android:fontFamily="@font/roboto"
+                android:paddingRight="60dp"
+                android:gravity="center"
+                android:text="Judul Buku"
+                android:textColor="@color/light_blue"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/judul_baner" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="25dp">
+
+            <ImageView
+                android:id="@+id/img_buku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginEnd="140dp"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txt_label_judul_buku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_below="@id/img_buku"
+                android:gravity="center"
+                android:layout_marginTop="18sp"
+                android:textSize="18sp"
+                android:textColor="?attr/actionMenuTextColor"
+                android:text="Nama Buku"/>
+
+            <RatingBar
+                android:id="@+id/lbl_ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_label_judul_buku"
+                android:numStars="5"
+                android:rating="3"
+                android:stepSize="0.5"
+                android:progressTint="@color/yellow"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="45dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_download"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="21dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textAllCaps="false"
+                android:text="Download"
+                app:backgroundTint="@color/green_pastel"
+                android:layout_below="@id/lbl_ratingbar"
+                app:icon="@drawable/ic_baseline_insert_drive_file_24"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"/>
+
+            <LinearLayout
+                android:id="@+id/grp_penulis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/btn_download"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/lbl_penulis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginStart="21dp"
+                android:layout_below="@id/btn_post"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="?attr/actionMenuTextColor"
+                android:text="Penulis : "/>
+
+            <TextView
+                android:id="@+id/txt_penulis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginStart="0dp"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="?attr/actionMenuTextColor"
+                android:text="siapa ke"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grp_publisher"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/grp_penulis"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/lbl_publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_below="@id/btn_post"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="?attr/actionMenuTextColor"
+                    android:text="Publisher : "/>
+
+                <TextView
+                    android:id="@+id/txt_publisher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="0dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="?attr/actionMenuTextColor"
+                    android:text="siapa ke"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grp_tebal_buku"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/grp_publisher"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/lbl_tebal_buku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_below="@id/btn_post"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="?attr/actionMenuTextColor"
+                    android:text="Tebal Buku : "/>
+
+                <TextView
+                    android:id="@+id/txt_tebal_buku"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="0dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="?attr/actionMenuTextColor"
+                    android:text="berapa ke"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/grp_genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/grp_tebal_buku"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <TextView
+                    android:id="@+id/lbl_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="21dp"
+                    android:layout_below="@id/btn_post"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="?attr/actionMenuTextColor"
+                    android:text="Genre : "/>
+
+                <TextView
+                    android:id="@+id/txt_genre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="0dp"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textColor="?attr/actionMenuTextColor"
+                    android:text="apa ke"/>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/lbl_sinopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="21dp"
+                android:layout_below="@+id/grp_genre"
+                android:layout_="@id/grp_genre"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="?attr/actionMenuTextColor"
+                android:text="Sinopsis"/>
+
+            <TextView
+                android:id="@+id/txt_sinopsis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginEnd="21dp"
+                android:layout_below="@+id/lbl_sinopsis"
+                android:layout_="@id/grp_genre"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="?attr/actionMenuTextColor"
+                android:text="ini hanya pengetersann ye ges ya ini biar keliatan bnaykan aja tar kalau gak butuh hapus aja"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
