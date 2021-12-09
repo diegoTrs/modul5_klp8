@@ -111,6 +111,7 @@
 
             <RatingBar
                 android:id="@+id/lbl_ratingbar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/txt_label_judul_buku"
@@ -118,9 +119,9 @@
                 android:rating="3"
                 android:stepSize="0.5"
                 android:progressTint="@color/yellow"
-                android:layout_marginStart="70dp"
+                android:layout_marginStart="150dp"
+                android:layout_marginEnd="150dp"
                 android:layout_marginTop="15dp"
-                android:layout_marginEnd="45dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent" />
 
@@ -281,7 +282,6 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginStart="21dp"
                 android:layout_below="@+id/grp_genre"
-                android:layout_="@id/grp_genre"
                 android:textSize="18sp"
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="?attr/actionMenuTextColor"
@@ -295,11 +295,60 @@
                 android:layout_marginStart="21dp"
                 android:layout_marginEnd="21dp"
                 android:layout_below="@+id/lbl_sinopsis"
-                android:layout_="@id/grp_genre"
                 android:textSize="15sp"
                 android:fontFamily="@font/poppins_medium"
                 android:textColor="?attr/actionMenuTextColor"
                 android:text="ini hanya pengetersann ye ges ya ini biar keliatan bnaykan aja tar kalau gak butuh hapus aja"/>
+
+
+            <Button
+                android:id="@+id/btn_rating"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="21dp"
+                android:fontFamily="@font/poppins_medium"
+                android:textAllCaps="false"
+                android:text="Tulis Review dan Berikan Rating"
+                app:backgroundTint="@color/orange_pastel"
+                android:layout_below="@id/txt_sinopsis"
+                app:icon="@drawable/comment"
+                app:iconGravity="textStart"
+                app:iconTint="@color/white"/>
+
+
+            <TextView
+                android:id="@+id/lbl_rating_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="21dp"
+                android:layout_below="@+id/btn_rating"
+                android:textSize="18sp"
+                android:fontFamily="@font/poppins_medium"
+                android:textColor="?attr/actionMenuTextColor"
+                android:text="Rating dan Review"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="76sp"
+                android:orientation="vertical"
+                android:layout_below="@+id/lbl_rating_review"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/row_comment_rating"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:listitem="@layout/row_item_comment_rating" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </RelativeLayout>
 
